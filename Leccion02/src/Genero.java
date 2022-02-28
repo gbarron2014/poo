@@ -4,7 +4,7 @@
  * Fecha: 24 Febrero 2022 
 */
 public class Genero {
-	public String nombre;
+	public String nombre ;
 
 	Genero() {
 		System.out.println("Construyendo un objeto Genero");

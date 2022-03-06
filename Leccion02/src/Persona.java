@@ -8,6 +8,8 @@ public class Persona {
 	public String telefono;
 	public String direccion;
 	
+	Persona() {
+	}
 
 	Persona(String pNombre) {
 		this.nombre = pNombre;
@@ -26,4 +28,6 @@ public class Persona {
 			"\nTelefono " + this.telefono +
 			"\nDireccion " + this.direccion;
 	}
-}
+
+
+}// Fin clase

@@ -1,2 +1,2 @@
 # Conceptos fundamentales de Java
-![Información Lección] (Leccion01.pdf)
+<embed src="Leccion01.pdf" type="application/pdf">

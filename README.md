@@ -7,6 +7,6 @@
 
 [Lección 1 Conceptos Clases y Objetos](Leccion01/README.md)
 
-[Lección 2 Modificadores de Acceso](Leccion01/README.md)
+[Lección 2 Modificadores de Acceso](Leccion02/README.md)
 
-[Lección 3 Encapsulación](Leccion01/README.md)
+[Lección 3 Encapsulación](Leccion03/README.md)

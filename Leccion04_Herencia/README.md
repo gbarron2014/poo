@@ -79,3 +79,64 @@ Ejecución de la clase Test
   java Test
 ```
 ***
+## Implementando la Clase Estudiante
+```
+/**
+ * Descripcion: La clase representa a todos los estudiantes UTNG.
+ * Autor:   Gabriel Barrón
+ * Fecha: 09 Marzo 2022
+ */
+public class Estudiante extends Persona {
+	public String numeroControl;
+	public String carrera;
+
+	Estudiante() {
+		super();
+		this.numeroControl = "";
+		this.carrera = "";
+	}
+
+	Estudiante (String n,
+		 String a, String g, String c,
+		String nc, String ca) {
+
+		super(n,a,g,c);
+		this.numeroControl = nc;
+		this.carrera = ca;
+
+	}
+
+	public String toString() {
+		return super.toString() +
+			"\nNum Control: " + this.numeroControl +
+			"\nCarrera: " + this.carrera;
+	}
+
+}
+```
+
+Modificar la clase Test
+```
+/**
+*Descripcion: Clase Generica para probar las clases de diagrama.
+* Autor: Gabriel Barrón
+* Fecha: 09 Marzo 2022
+*/
+public class Test{
+
+	public static void main(String[] args) {
+		Estudiante p1 = new Estudiante("Gabriel",
+			 "Barron", 
+			"Hombre",
+			 "BARG740602HGTRDB07","10103234",
+			"Desarrollo Sw");
+
+		System.out.println(p1);
+		System.out.println();
+
+		Estudiante p2 = new Estudiante();
+		System.out.println(p2);
+	}
+}
+```
+

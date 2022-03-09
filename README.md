@@ -9,4 +9,6 @@
 
 [Lección 2 Modificadores de Acceso](Leccion02/README.md)
 
-[Lección 3 Encapsulación](Leccion03/README.md)
+[Lección 3 Herencia](LeccionHerencia/README.md)
+
+[Lección 4 Encapsulación](LeccionEncapsulacion/README.md)

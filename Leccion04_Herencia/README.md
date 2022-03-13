@@ -1,12 +1,16 @@
 # Definiendo la Herencia en Java
 
+## Concepto de Herencia.
+En ocasiones podemos vernos en la necesidad de crear objetos parecidos y con una estrecha relación entre si.
+La palabra reservada para implementar la herencia en java es **extends**.
+
 Observemos el siguiente diagrama.
 ![image](https://user-images.githubusercontent.com/8560750/157503492-f383e76b-53b7-4380-90d3-a2036f947f8a.png)
 
 ## Implementar la clase Persona
 ```
 /**
-* Descripción: Define a la clase Persona dentro del contexto UTNG.
+* Descripción: Define a la clase Persona dentro del contexto UTNG e indica que hereda de la clase padre Object.
 * Autor: Gabriel Barrón
 * Fecha: 09 Marzo 2022
 */

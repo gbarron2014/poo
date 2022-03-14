@@ -5,6 +5,8 @@ puede cambiar mediante las operaciones definidas para ese objeto.
 
 El encapsulamiento significa datos privados y métodos públic.
 
+![imagen](https://user-images.githubusercontent.com/8560750/158092562-b7c5653c-2d56-4d94-bacd-35ed3c8481da.png)
+
 
 
 # Definir la clase **Genero** implementando el encapsulamiento.

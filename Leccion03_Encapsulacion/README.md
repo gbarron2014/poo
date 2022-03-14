@@ -4,11 +4,11 @@ Programación orientada a objetos, se denomina encapsulamiento al ocultamiento d
 puede cambiar mediante las operaciones definidas para ese objeto.
 
 El encapsulamiento significa datos privados y métodos públic.
+
+
+
+# Definir la clase **Genero** implementando el encapsulamiento.
 ![imagen](https://user-images.githubusercontent.com/8560750/158085234-92ef32f9-5277-4ede-8100-e44ca460d142.png)
-
-
-### Definir la clase con el atributo privado
-
 ```
 /**
  * Descripcion: Clase que representa el Genero de una persona
@@ -131,3 +131,86 @@ public class TestGenero {
 - Agregar el contructor donde se agregue el parámetro nombre y valide que el nombre no debe ser vacío o null y la longitud menor a 3, solamente admita letras y espacios.
 - Utiliza la referencia de los métodos: isBlank, isEmpty, length [Referencia Java 11](https://howtodoinjava.com/java11/check-blank-string/)
 
+***
+# Definir la clase **Hospital** implementando el encapsulamiento.
+![imagen](https://user-images.githubusercontent.com/8560750/158090885-5f06aabb-e5a0-43fd-ad02-dc53ffac649e.png)
+
+### Definiendo los atributos privados
+```
+/**
+ * Representa la clase Hospital encapsulada.
+ * Autor: Gabriel Barrón
+ * Fecha: 1 Marzo 2021
+ */
+public class Hospital {
+
+    //Atributos privados
+    private String nombre;
+    private String director;
+    private String direccion;
+    private String telefono;
+}
+```
+
+### Definiendo métodos GETTERS
+```
+/**
+ * Representa la clase Hospital encapsulada.
+ * Autor: Gabriel Barrón
+ * Fecha: 1 Marzo 2021
+ */
+public class Hospital {
+
+    //Atributos privados
+    private String nombre;
+    private String director;
+    private String direccion;
+    private String telefono;
+
+    //---GETTERS
+    public String getDirector() {
+        return this.director;
+    }
+
+    public String getDireccion() {
+        return this.direccion;
+    }
+
+    public String getTelefono() {
+        return this.telefono;
+    }
+
+    public String getNombre() {
+        return this.nombre;
+    }
+}
+
+```
+### Definiendo métodos SETTERS
+```
+    //--------------SETTERS
+    public void setNombre (String pNombre) {
+        //Valida que no sea nulo o vacío y longitud mayor a 10
+        if (!(pNombre.isBlank() || pNombre.length() < 10)) {
+            this.nombre = pNombre;
+        }
+    }
+
+    public void setDirector(String pDirector) {
+        this.director = pDirector;
+    }
+
+    public void setDireccion(String pDireccion) {
+        this.direccion = pDireccion;
+    }
+
+    public void setTelefono(String pTelefono) {
+        this.telefono = pTelefono;
+    }
+```
+
+### Desafío
+- Definir los constructores en todos sus sabores de acuerdo al diagrama de clase.
+- Validar que el nombre: No sea vacío o nulo, acepte solo letras y espacios en blanco y longitud no menor a 10
+- Validar que el director: No sea vacío o nulo, acepte solo letras y espacios en blanco y longitud no sea menor a 25
+- Implemenentar el método toString

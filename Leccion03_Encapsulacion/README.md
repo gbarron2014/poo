@@ -78,6 +78,21 @@ public class Genero {
 }
 ```
 
+Los métodos **setters** me permiten validar que la información sea correcta; en otro caso, no modifica el valor.
+```
+	/*
+	* Establece el nombre de la propiedad nombre
+	*/
+	public void setNombre(String pNombre) {
+		//Verifica que el nombre NO sea vacío o nulo
+		if (!(pNombre.isBlank() || pNombre == null)) {
+			this.nombre = pNombre; //Asigna el valor tomado por el parámetro
+		}
+
+		return; //Por el simple hecho de usarlo
+	}
+```
+
 ### Implementar el método toString
 
 ```
@@ -88,3 +103,31 @@ public class Genero {
 		return "Género: " + this.nombre;
 	}
 ```
+
+### Implementar la clase TestGenero para verificar el funcionamiento
+- Crear un objeto e tipo Genero.
+- Utilzar el método get y set para conocer el estado de un objeto y modificarlo.
+
+```
+/**
+ * Clase que prueba el Genero.
+ * Autor: Gabriel Barrón
+ * fecha: 1 Marzo 2022
+ */
+public class TestGenero {
+	public static void main(String args[]) {
+		Genero objGenero = new Genero(); // Se crea un objeto de tipo Genero
+		objGenero.setNombre("Mujer"); //Modificar el estado del Genero
+		
+		System.out.println("Género " + objGenero.getNombre()); //Conocer el estado
+	}
+}
+```
+
+
+#### Desafío
+- Modifica la validación del método setter donde valida que la longitud del nombre debe ser 3 o más.
+- Agregar el contructor default donde establezcas el valor de nombre a vacio.
+- Agregar el contructor donde se agregue el parámetro nombre y valide que el nombre no debe ser vacío o null y la longitud menor a 3, solamente admita letras y espacios.
+- Utiliza la referencia de los métodos: isBlank, isEmpty, length [Referencia Java 11](https://howtodoinjava.com/java11/check-blank-string/)
+

@@ -216,3 +216,110 @@ public class Hospital {
 - Validar que el nombre: No sea vacío o nulo, acepte solo letras y espacios en blanco y longitud no menor a 10
 - Validar que el director: No sea vacío o nulo, acepte solo letras y espacios en blanco y longitud no sea menor a 25
 - Implemenentar el método toString
+
+# Definir la clase **Persona** implementando el encapsulamiento.
+A la clase Persona se le conoce como Super Clase o clase Base
+```
+/*
+* Clase que representa a todas las personas, es abstracta porque no puede instanciar
+* objetos
+*/
+public abstract class Persona {
+
+}
+```
+## Definir los atributos protegidos para sus Hijos
+```
+/*
+* Clase que representa a todas las personas, es abstracta porque no puede instanciar
+* objetos
+*/
+import java.time.LocalDate; //paquete donde se encuentra
+
+public abstract class Persona {
+    //Declaración de atributos protegidos
+    protected String nombre;
+    protected String apellidos;
+    protected LocalDate fechaNacimiento;
+    protected String direccion;
+    protected String telefono;
+    protected Genero genero; // referencia de objeto Genero
+}
+```
+
+### Los GETTERS se implementan de la misma manera
+```
+    //Declaración de GETTERS
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public String getApellidos() {
+        return this.apellidos;
+    }
+
+    public LocalDate getFechaNacimiento() {
+        this.fechaNacimiento;
+    }
+
+    public String getDireccion() {
+        return this.direccion;
+    }
+
+    public String getTelefono() {
+        return this.telefono;
+    }
+
+    public Genero getGenero() {
+        return this.genero;
+    }
+```
+### Los SETTERS se implementan de la misma manera
+```
+    //Declaración de setters
+    public void setNombre (String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApellidos (String apellidos) {
+        this.apellidos = apellidos;
+    }
+    public void setDireccion (String direccion) {
+        this.direccion = direccion;
+    }
+    public void setTelefono (String telefono) {
+        this.telefono = telefono;
+    }
+    public void setFechaNacimiento (LocalDate fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+    public void setGenero (Genero genero) {
+        this.genero = genero;
+    }
+```
+### Definición de constructores
+Verificar que el constructor Genero("Mujer") exista sino implementarlos.
+```
+    //Constructores
+    public Persona() {
+        this.nombre = "";
+        this.apellidos = "";
+        this.direccion = "";
+        this.telefono = "";
+        this.genero = new Genero("Mujer");
+    }
+
+    public Persona (String nombre){
+        this(); //Invocación de constructor sin parámetros
+        this.nombre = nombre;
+    }
+
+    public Persona (String nombre, String apellidos){
+        this(nombre); //Invocación de constructor con parámetro nombre
+        this.apellidos = apellidos;
+    }
+```
+### Desafío
+- Implementar los constructores de acuerdo al diagrama.
+- Implementar el método toString
+

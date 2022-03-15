@@ -1,16 +1,31 @@
-/**
- * Descripcion: Clase que representa el Genero de una persona
- * Autor: Gabriel Barron
- * Fecha: 24 Febrero 2022 
-*/
 public class Genero {
-	private String nombre ;
+	private String nombre;
 
+	public Genero() {
+		this.nombre = "Mujer";
+	}
+
+	public Genero(String nombre) {
+		this.nombre = nombre;
+	}
+
+	//     GETTER
 	public String getNombre() {
 		return this.nombre;
 	}
-	
-	public void setNombre(String pNombre) {
-		this.nombre = pNombre;
+
+	//    SETTER
+	public void setNombre(String pnombre) {
+
+		if (!pnombre.isEmpty() && !(pnombre.length() < 5)) {
+			this.nombre = pnombre;
+		} else {
+			System.out.println("Dato incorrecto");
+		}
 	}
+
+	public String toString() {
+		return "Nombre: " + this.nombre;
+	}
+
 }

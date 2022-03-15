@@ -7,9 +7,14 @@ El encapsulamiento significa datos privados y métodos públic.
 
 ![imagen](https://user-images.githubusercontent.com/8560750/158092562-b7c5653c-2d56-4d94-bacd-35ed3c8481da.png)
 
+# Indice de Clases Implementadas
+1. [Clase Genero](#clase-genero)
+2. [Clase Hospital](#clase-hospital)}
+3. [Clase Persona](#clase-persona)
+4. [Clase Paciente](#clase-paciente)
 
 
-# Definir la clase **Genero** implementando el encapsulamiento.
+# Clase Genero
 ![imagen](https://user-images.githubusercontent.com/8560750/158085234-92ef32f9-5277-4ede-8100-e44ca460d142.png)
 ```
 /**
@@ -134,7 +139,7 @@ public class TestGenero {
 - Utiliza la referencia de los métodos: isBlank, isEmpty, length [Referencia Java 11](https://howtodoinjava.com/java11/check-blank-string/)
 
 ***
-# Definir la clase **Hospital** implementando el encapsulamiento.
+# Clase Hospital
 ![imagen](https://user-images.githubusercontent.com/8560750/158090885-5f06aabb-e5a0-43fd-ad02-dc53ffac649e.png)
 
 ### Definiendo los atributos privados
@@ -217,7 +222,7 @@ public class Hospital {
 - Validar que el director: No sea vacío o nulo, acepte solo letras y espacios en blanco y longitud no sea menor a 25
 - Implemenentar el método toString
 
-# Definir la clase **Persona** implementando el encapsulamiento.
+# Clase Persona
 A la clase Persona se le conoce como Super Clase o clase Base
 ```
 /*
@@ -323,8 +328,8 @@ Verificar que el constructor Genero("Mujer") exista sino implementarlos.
 - Implementar los constructores de acuerdo al diagrama.
 - Implementar el método toString
 
-# Clase **Docente**.
-A la clase Docente se le conoce como Super HIja o clase Derivada
+# Clase Paciente
+A la clase Paciente se le conoce como Super HIja o clase Derivada
 ```
 /*
 * Clase paciente que hereda de clase Persona

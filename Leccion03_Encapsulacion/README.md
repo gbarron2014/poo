@@ -323,3 +323,118 @@ Verificar que el constructor Genero("Mujer") exista sino implementarlos.
 - Implementar los constructores de acuerdo al diagrama.
 - Implementar el método toString
 
+# Clase **Docente**.
+A la clase Docente se le conoce como Super HIja o clase Derivada
+```
+/*
+* Clase paciente que hereda de clase Persona
+*/
+import java.time.LocalDate;
+
+public class Paciente extends Persona {
+    //Declaración de atributos privados
+    private long id;
+    private LocalDate aceptado;
+    private String prescripciones;
+    private String alergias;
+}
+```
+
+## Implementando Getters
+```
+    // Implementando Getters
+    public long getId() {
+        return this.id;
+    }
+
+    public LocalDate getAceptado() {
+        return this.aceptado;
+    }
+
+    public String getPrescripciones() {
+        return this.prescripciones;
+    }
+
+    public String getAlergias() {
+        return this.alergias;
+    }
+```
+## Implementando Setters
+```
+    //Implementando Setters
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setAceptado(LocalDate aceptado) {
+        this.aceptado = aceptado;
+    }
+
+    public void setPrescripciones(String prescripciones) {
+        this.prescripciones = prescripciones;
+    }
+
+    public void setAlergias(String alergias) {
+        this.alergias = alergias;
+    }
+```
+### Constructores
+```
+
+    //Definición de constructores
+    public Paciente() {
+        super(); //Invoca a constructor Padre
+        this.id = 0;
+        this.aceptado = LocalDate.now(); //Fecha Hoy
+        this.prescripciones = "";
+        this.alergias = "";
+    }
+
+    public Paciente(long id) {
+        this(); //Invoca a constructor 
+        this.id = id;
+
+    }
+
+    public Paciente(long id, LocalDate aceptado) {
+        this(id); //Invoca a constructor 
+        this.aceptado = aceptado; 
+    }
+```
+
+### Método toString
+```
+    public String toString() {
+        return super.toString() + 
+            "\nId: " + this.id +
+            "\nPrescripciones: " + this.prescripciones + 
+            "\nAlergias: " + this.alergias + 
+            "\nFecha Aceptación: " + this.aceptado;
+    }
+```
+
+# Test paciente
+```
+import java.time.LocalDate;
+
+public class Test {
+	public static void main(String[] args) {
+
+		//Datos de persona
+		Paciente p1 = new Paciente("Juan ", "Valdez Lima");
+		p1.setFechaNacimiento(LocalDate.of(2002, 1 , 25));
+		p1.setDireccion("Av Educación Tecnologíca 34");
+		p1.setTelefono("4181825500");
+		p1.setGenero(new Genero("Hombre"));
+
+		//Valores de paciente
+		p1.setId(1);
+		p1.setAceptado(LocalDate.now()); //Hoy
+		p1.setPrescripciones("Acido Acetil");
+		p1.setAlergias("Polvo en Exceso");
+
+		//Empleando método toString
+		System.out.println(p1);
+	}
+}
+```
